@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.container {
+    display: flex;
+
+    position: relative;
+    width: auto; height: 700px;
+
+    background: url('/image.jpg') no-repeat center;
+}
+
+h1 {
+    margin: auto;
+    padding: 0;
+
+    font: 700 33px 'Open Sans', sans-serif;
+    text-transform: uppercase;
+
+    color: hotpink;
+}

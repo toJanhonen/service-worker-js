@@ -1,0 +1,14 @@
+{
+    "name": "service",
+    "version": "0.0.1",
+
+    "author": "frantic",
+
+    "devDependencies": {
+        "express": "~4.13.4",
+        "ejs": "~2.4.1",
+
+        "dotenv": "~2.0.0"
+    },
+    "private": true
+}
