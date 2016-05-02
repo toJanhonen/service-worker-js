@@ -1,7 +1,7 @@
 !function() {
     var serviceWorker = 'application-version0.0.1';
     var fileList = [
-        '/', '/index.html', '/format/format.css', '/main.js'
+        '/', '/index.html', '/format/format.css', '/main.js', 'image.jpg'
     ];
 
     self.addEventListener('install', function(event) {
