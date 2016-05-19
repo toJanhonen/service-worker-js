@@ -15,6 +15,9 @@
 
     self.addEventListener('activate', function(event) {
         console.log('[serviceWorker] clear');
+
+        //no refresh pls
+        event.waitUntil(self.clients.claim());
     });
 
     //notification
