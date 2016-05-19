@@ -1,7 +1,7 @@
 !function() {
     var serviceWorker = 'application-version0.0.1';
     var fileList = [
-        '/', '/index.html', '/format/format.css', '/main.js', 'image.jpg'
+        '/', '/index.html', '/format/format.css', '/main.js', '/image.jpg'
     ];
 
     self.addEventListener('install', function(event) {
@@ -17,6 +17,22 @@
         console.log('[serviceWorker] clear');
     });
 
+    //notification
+    self.addEventListener('push', function(event) {
+        console.log('[serviceWorker] notification');
+
+        let title = 'notification';
+        event.waitUntil(
+            self.registration.showNotification(title, {
+                body: 'you know nothing',
+                icon: 'resource/image.png',
+
+                tag: 'service-worker-js'
+            })
+        );
+    });
+
+    //offline
     self.addEventListener('fetch', function(event) {
         console.log('[serviceWorker] fetch');
         event.respondWith(

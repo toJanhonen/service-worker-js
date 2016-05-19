@@ -12,6 +12,14 @@
                 if(event.active) {
                     console.log('[application] service worker active');
                 };
+
+                //notification
+                event.pushManager.subscribe({
+                    userVisibleOnly: true
+                }).then(function(subscription) {
+                    console.log('[subscription]', subscription);
+                });
+
         }).catch(function(error) { console.log('you know nothing'); });
     }
 
